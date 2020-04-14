@@ -1,0 +1,28 @@
+server:
+  port: 8089
+
+# mybatis
+mybatis:
+  type-aliases-package: com.eample.webrtc
+  mapper-locations: classpath:mapper/**/*.xml
+  configuration:
+    lazy-loading-enabled: true
+    aggressive-lazy-loading: false
+    map-underscore-to-camel-case: true
+    default-fetch-size: 100
+    default-statement-timeout: 30
+
+########################################################################################################################
+### 실/운영
+########################################################################################################################
+---
+spring:
+  profiles: prod
+
+
+########################################################################################################################
+### 로컬
+########################################################################################################################
+---
+spring:
+  profiles: local
